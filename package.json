@@ -1,14 +1,23 @@
 {
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
+    "lint": "turbo lint --",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
+  "lint-staged": {
+    "**/*.(ts|tsx|js|jsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
   "devDependencies": {
-    "eslint": "^8.56.0",
     "@repo/eslint-config": "*",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "turbo": "latest"
   },
