@@ -4,6 +4,10 @@ import {
   GeneralInformationDisplay,
   GeneralInformationForm,
 } from "./components/GeneralInformation";
+import {
+  EducationExperienceDisplay,
+  EducationExperienceForm,
+} from "./components/EducationExperience";
 
 function App() {
   return (
@@ -11,9 +15,11 @@ function App() {
       <div>
         <div>
           <GeneralInformationForm />
+          <EducationExperienceForm />
         </div>
         <div>
           <GeneralInformationDisplay />
+          <EducationExperienceDisplay />
         </div>
       </div>
     </FormContextProvider>
