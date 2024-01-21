@@ -7,6 +7,7 @@ import {
   educationExperienceFields,
   workExperienceFields,
   EducationExperience,
+  WorkExperience,
 } from "./types";
 import { FormContext } from "./useFormContext";
 import { arrayToObject } from "../../utils";
@@ -68,7 +69,7 @@ const FormContextProvider: React.FC<Props> = ({ children }) => {
   }, []);
 
   const updateWorkExperience = useCallback(
-    (index: number, field: keyof EducationExperience, value: string) => {
+    (index: number, field: keyof WorkExperience, value: string) => {
       setFormState((prevState) => {
         const shallowWorkExperienceCopy = [...prevState.workExperience];
         shallowWorkExperienceCopy[index] = {

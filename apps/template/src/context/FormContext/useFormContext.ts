@@ -1,6 +1,11 @@
 import { createContext, useContext } from "react";
 
-import { GeneralInformation, EducationExperience, FormState } from "./types";
+import {
+  GeneralInformation,
+  EducationExperience,
+  FormState,
+  WorkExperience,
+} from "./types";
 
 export type UseFormContext = {
   updateGeneralInformation: (
@@ -15,7 +20,7 @@ export type UseFormContext = {
   addEducationExperience: () => void;
   updateWorkExperience: (
     index: number,
-    field: keyof EducationExperience,
+    field: keyof WorkExperience,
     value: string,
   ) => void;
   addWorkExperience: () => void;
